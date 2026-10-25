@@ -1,0 +1,93 @@
+===== PÁGINA 1 =====
+
+FACTURA
+Material de oficina y formación - Datos ficticios
+Nº Fra.: PR-2026-004
+Su pedido: PED-2026-0104
+Fecha expedición: 15/09/2026
+Albarán: ALB-2026-0204
+Vence el: 15/10/2026
+Código de cliente: CLI-0304
+Divisa: EUR
+Fecha de pedido: 13/09/2026
+PROVEEDOR
+DESTINATARIO
+Papelería Taller Demo
+Centro Cultural Ficticio
+NIF: DEMO-E-004
+NIF: DEMO-C-004
+Calle de Ejemplo, 14
+Avenida de Prácticas, 24
+CP: 00041 - Ciudad Demo
+CP: 00042 - Ciudad Ficticia
+Correo electrónico: ventasOemisor04.example
+Correo electrónico: comprasO cliente04.example
+Teléfono: 000 100 004
+Teléfono: 000 200 004
+Código
+Artículo
+Cant.
+Precio EUR
+Dto. %
+IVA %
+Importe EUR
+MAT-4001
+Blocs de dibujo
+12
+3,25
+0
+21
+39,00
+MAT-4002
+Cajas de acuarelas
+5
+18,90
+5
+21
+89,78
+MAT-4003
+Pinceles surtidos
+2
+14,40
+0
+21
+28,80
+MAT-4004
+Etiquetas adhesivas
+6
+3,50
+10
+21
+18,90
+MAT-4005
+Fundas transparentes
+4
+4,75
+0
+21
+19,00
+PAGO Y ENTREGA
+Subtotal sin descuentos
+202,30 EUR
+Modo de pago: Domiciliación
+Descuento en líneas
+6,82 EUR
+Condiciones: 30 días desde emisión
+Portes
+6,00 EUR
+Referencia de pago: PAGO-2026-004
+Base de cálculo
+201,48 EUR
+Cuenta (IBAN):
+ES00 0000 0000 0000 0000 0004
+Cuota IVA 21%
+42,31 EUR
+Entrega: almacén del cliente
+Importe total
+243,79 EUR
+Dirección: Avenida de Prácticas, 24
+00042 - Ciudad Ficticia
+Observaciones: entregar de 09:00 a 14:00. Contacto: Recepción Demo.
+Los importes de línea incluyen el descuento indicado; el IVA se añade en el resumen.
+Documento ficticio para una práctica. Identificadores, contactos y cuenta son de prueba.
+Página 1 de 1.

@@ -11,9 +11,10 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 # OCR Tesseract (Debian 13: tesseract 5.x) con el modelo de español.
-# libgl/libglib: requeridas por OpenCV (EasyOCR y docTR).
+# libgl/libglib: requeridas por OpenCV (EasyOCR y docTR). build-essential/cmake: compilar llama.cpp.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends tesseract-ocr tesseract-ocr-spa libgl1 libglib2.0-0 \
+       build-essential cmake \
     && rm -rf /var/lib/apt/lists/*
 
 # PyTorch en su propia capa (es la más pesada y la que menos cambia).
@@ -29,6 +30,14 @@ RUN pip install \
     python-doctr==1.1.0 \
     psutil==7.1.0 \
     pytest==9.1.1
+
+# LLM local en CPU: llama.cpp (vía llama-cpp-python, compilado para la CPU donde se construye la imagen)
+# y transformers como alternativa sobre PyTorch. Los pesos NO van en la imagen: src/download_models.py.
+RUN pip install \
+    llama-cpp-python==0.3.36 \
+    transformers==5.20.2 \
+    huggingface_hub==1.33.0
+ENV LLM_DIR=/app/modelos
 
 # Pesos de los OCR neuronales descargados en la construcción (versión fija dentro de la imagen).
 RUN python -c "import easyocr; easyocr.Reader(['es'], gpu=False, model_storage_directory='/models/easyocr', verbose=False)" \

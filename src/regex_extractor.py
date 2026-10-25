@@ -41,6 +41,8 @@ PATTERNS = {
 NORMALIZERS = {
     "fecha_emision": norm.date_iso,
     "fecha_vencimiento": norm.date_iso,
+    "moneda": norm.currency,
+    "cliente_email": norm.email,
     "iban": norm.iban,
     "base_imponible": norm.amount,
     "iva_importe": norm.amount,

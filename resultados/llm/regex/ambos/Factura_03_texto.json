@@ -1,0 +1,45 @@
+{
+  "campos": {
+    "numero_factura": null,
+    "fecha_emision": null,
+    "fecha_vencimiento": null,
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0103",
+    "emisor_nombre": null,
+    "emisor_id_fiscal": null,
+    "cliente_nombre": null,
+    "cliente_id_fiscal": null,
+    "cliente_email": null,
+    "forma_pago": null,
+    "iban": null,
+    "base_imponible": null,
+    "iva_importe": null,
+    "total": "208.12"
+  },
+  "lineas": [],
+  "evaluacion": {
+    "ok": 3,
+    "null": 12,
+    "error": 0,
+    "campos": {
+      "numero_factura": "null",
+      "fecha_emision": "null",
+      "fecha_vencimiento": "null",
+      "moneda": "ok",
+      "numero_pedido": "ok",
+      "emisor_nombre": "null",
+      "emisor_id_fiscal": "null",
+      "cliente_nombre": "null",
+      "cliente_id_fiscal": "null",
+      "cliente_email": "null",
+      "forma_pago": "null",
+      "iban": "null",
+      "base_imponible": "null",
+      "iva_importe": "null",
+      "total": "ok"
+    },
+    "lineas_celdas_ok": 0,
+    "lineas_celdas": 35,
+    "errores": {}
+  }
+}

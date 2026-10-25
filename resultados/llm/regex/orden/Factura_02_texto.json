@@ -1,0 +1,45 @@
+{
+  "campos": {
+    "numero_factura": "PR-2026-002",
+    "fecha_emision": "2026-09-04",
+    "fecha_vencimiento": "2026-10-04",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0102",
+    "emisor_nombre": null,
+    "emisor_id_fiscal": null,
+    "cliente_nombre": null,
+    "cliente_id_fiscal": null,
+    "cliente_email": null,
+    "forma_pago": "Tarjeta",
+    "iban": "ES0000000000000000000002",
+    "base_imponible": "123.99",
+    "iva_importe": "26.04",
+    "total": "150.03"
+  },
+  "lineas": [],
+  "evaluacion": {
+    "ok": 10,
+    "null": 5,
+    "error": 0,
+    "campos": {
+      "numero_factura": "ok",
+      "fecha_emision": "ok",
+      "fecha_vencimiento": "ok",
+      "moneda": "ok",
+      "numero_pedido": "ok",
+      "emisor_nombre": "null",
+      "emisor_id_fiscal": "null",
+      "cliente_nombre": "null",
+      "cliente_id_fiscal": "null",
+      "cliente_email": "null",
+      "forma_pago": "ok",
+      "iban": "ok",
+      "base_imponible": "ok",
+      "iva_importe": "ok",
+      "total": "ok"
+    },
+    "lineas_celdas_ok": 0,
+    "lineas_celdas": 35,
+    "errores": {}
+  }
+}

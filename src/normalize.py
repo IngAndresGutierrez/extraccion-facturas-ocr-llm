@@ -40,6 +40,18 @@ def iban(raw: str | None) -> str | None:
     return s if re.fullmatch(r"[A-Z]{2}\d{2}[A-Z0-9]{11,30}", s) else None
 
 
+def email(raw: str | None) -> str | None:
+    """Solo acepta una dirección bien formada; un texto sin '@' (p. ej. un email mal leído por el OCR) -> None."""
+    s = text(raw)
+    return s if s and re.fullmatch(r"[\w.+\-]+@[\w\-]+(?:\.[\w\-]+)+", s) else None
+
+
+def currency(raw: str | None) -> str | None:
+    """Código ISO 4217: tres letras mayúsculas."""
+    s = text(raw)
+    return s if s and re.fullmatch(r"[A-Z]{3}", s) else None
+
+
 def text(raw: str | None) -> str | None:
     if raw is None:
         return None

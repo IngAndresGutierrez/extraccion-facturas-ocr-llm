@@ -1,0 +1,418 @@
+{
+  "hardware": {
+    "arquitectura": "aarch64",
+    "cpus": 10,
+    "so": "Linux-7.0.14-linuxkit-aarch64-with-glibc2.41",
+    "ram_total_mb": 7934.1,
+    "ram_disponible_mb": 7287.2,
+    "host": "Apple M5, 16 GB (macOS); Docker Desktop VM linux/arm64",
+    "python": "3.11.17"
+  },
+  "regex": [
+    {
+      "metodo": "ocr+regex",
+      "variante": "original",
+      "n": 5,
+      "ok": 70,
+      "null": 5,
+      "error": 0,
+      "lineas_celdas_ok": 175,
+      "lineas_celdas": 175,
+      "tiempo_medio_s": 0.0
+    },
+    {
+      "metodo": "ocr+regex",
+      "variante": "etiquetas",
+      "n": 5,
+      "ok": 15,
+      "null": 60,
+      "error": 0,
+      "lineas_celdas_ok": 0,
+      "lineas_celdas": 175,
+      "tiempo_medio_s": 0.0
+    },
+    {
+      "metodo": "ocr+regex",
+      "variante": "orden",
+      "n": 5,
+      "ok": 50,
+      "null": 25,
+      "error": 0,
+      "lineas_celdas_ok": 0,
+      "lineas_celdas": 175,
+      "tiempo_medio_s": 0.0
+    },
+    {
+      "metodo": "ocr+regex",
+      "variante": "ambos",
+      "n": 5,
+      "ok": 15,
+      "null": 60,
+      "error": 0,
+      "lineas_celdas_ok": 0,
+      "lineas_celdas": 175,
+      "tiempo_medio_s": 0.0
+    }
+  ],
+  "runs": [
+    {
+      "model_id": "qwen2.5-1.5b-q4",
+      "config": {
+        "runtime": "llama.cpp",
+        "llama_cpp_python": "0.3.36",
+        "repo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+        "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+        "archivo": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+        "model_id": "qwen2.5-1.5b-q4",
+        "cuantizacion": "Q4_K_M",
+        "n_ctx": 4096,
+        "n_threads": 10,
+        "temperature": 0.0,
+        "max_tokens": 1500,
+        "salida": "json_schema (gramática)"
+      },
+      "carga_s": 1.17,
+      "ram_mb": {
+        "inicio": 17.2,
+        "tras_carga": 2036.1,
+        "pico": 2238.8
+      },
+      "filas": [
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-q4",
+          "variante": "original",
+          "n": 5,
+          "ok": 68,
+          "null": 7,
+          "error": 0,
+          "lineas_celdas_ok": 140,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 18.83
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-q4 (sin verificar)",
+          "variante": "original",
+          "n": 5,
+          "ok": 68,
+          "null": 5,
+          "error": 2,
+          "lineas_celdas_ok": 140,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 18.83
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-q4",
+          "variante": "etiquetas",
+          "n": 5,
+          "ok": 56,
+          "null": 12,
+          "error": 7,
+          "lineas_celdas_ok": 147,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 22.77
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-q4 (sin verificar)",
+          "variante": "etiquetas",
+          "n": 5,
+          "ok": 56,
+          "null": 6,
+          "error": 13,
+          "lineas_celdas_ok": 147,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 22.77
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-q4",
+          "variante": "orden",
+          "n": 5,
+          "ok": 67,
+          "null": 8,
+          "error": 0,
+          "lineas_celdas_ok": 0,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 11.85
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-q4 (sin verificar)",
+          "variante": "orden",
+          "n": 5,
+          "ok": 67,
+          "null": 5,
+          "error": 3,
+          "lineas_celdas_ok": 0,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 11.85
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-q4",
+          "variante": "ambos",
+          "n": 5,
+          "ok": 52,
+          "null": 13,
+          "error": 10,
+          "lineas_celdas_ok": 89,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 19.87
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-q4 (sin verificar)",
+          "variante": "ambos",
+          "n": 5,
+          "ok": 52,
+          "null": 5,
+          "error": 18,
+          "lineas_celdas_ok": 89,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 19.87
+        }
+      ],
+      "estadisticas": {
+        "original": {
+          "json_valido_1er_intento": 5,
+          "reintentos": 0,
+          "fallos_formato": 0,
+          "descartados": 2,
+          "descartados_que_eran_error": 2,
+          "descartados_que_eran_correctos": 0,
+          "tokens_generados": 2525
+        },
+        "etiquetas": {
+          "json_valido_1er_intento": 5,
+          "reintentos": 0,
+          "fallos_formato": 0,
+          "descartados": 6,
+          "descartados_que_eran_error": 6,
+          "descartados_que_eran_correctos": 0,
+          "tokens_generados": 2557
+        },
+        "orden": {
+          "json_valido_1er_intento": 5,
+          "reintentos": 0,
+          "fallos_formato": 0,
+          "descartados": 3,
+          "descartados_que_eran_error": 3,
+          "descartados_que_eran_correctos": 0,
+          "tokens_generados": 1182
+        },
+        "ambos": {
+          "json_valido_1er_intento": 5,
+          "reintentos": 0,
+          "fallos_formato": 0,
+          "descartados": 8,
+          "descartados_que_eran_error": 8,
+          "descartados_que_eran_correctos": 0,
+          "tokens_generados": 2129
+        }
+      }
+    },
+    {
+      "model_id": "qwen2.5-3b-q4",
+      "config": {
+        "runtime": "llama.cpp",
+        "llama_cpp_python": "0.3.36",
+        "repo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+        "revision": "7dabda4d13d513e3e842b20f0d435c732f172cbe",
+        "archivo": "qwen2.5-3b-instruct-q4_k_m.gguf",
+        "model_id": "qwen2.5-3b-q4",
+        "cuantizacion": "Q4_K_M",
+        "n_ctx": 4096,
+        "n_threads": 10,
+        "temperature": 0.0,
+        "max_tokens": 1500,
+        "salida": "json_schema (gramática)"
+      },
+      "carga_s": 3.98,
+      "ram_mb": {
+        "inicio": 17.3,
+        "tras_carga": 3849.7,
+        "pico": 4073.8
+      },
+      "filas": [
+        {
+          "metodo": "ocr+llm:qwen2.5-3b-q4",
+          "variante": "original",
+          "n": 5,
+          "ok": 70,
+          "null": 5,
+          "error": 0,
+          "lineas_celdas_ok": 175,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 47.92
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-3b-q4 (sin verificar)",
+          "variante": "original",
+          "n": 5,
+          "ok": 70,
+          "null": 5,
+          "error": 0,
+          "lineas_celdas_ok": 175,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 47.92
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-3b-q4",
+          "variante": "etiquetas",
+          "n": 5,
+          "ok": 70,
+          "null": 5,
+          "error": 0,
+          "lineas_celdas_ok": 175,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 47.83
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-3b-q4 (sin verificar)",
+          "variante": "etiquetas",
+          "n": 5,
+          "ok": 70,
+          "null": 5,
+          "error": 0,
+          "lineas_celdas_ok": 175,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 47.83
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-3b-q4",
+          "variante": "orden",
+          "n": 5,
+          "ok": 70,
+          "null": 5,
+          "error": 0,
+          "lineas_celdas_ok": 175,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 43.24
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-3b-q4 (sin verificar)",
+          "variante": "orden",
+          "n": 5,
+          "ok": 70,
+          "null": 5,
+          "error": 0,
+          "lineas_celdas_ok": 175,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 43.24
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-3b-q4",
+          "variante": "ambos",
+          "n": 5,
+          "ok": 70,
+          "null": 5,
+          "error": 0,
+          "lineas_celdas_ok": 175,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 42.33
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-3b-q4 (sin verificar)",
+          "variante": "ambos",
+          "n": 5,
+          "ok": 70,
+          "null": 5,
+          "error": 0,
+          "lineas_celdas_ok": 175,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 42.33
+        }
+      ],
+      "estadisticas": {
+        "original": {
+          "json_valido_1er_intento": 5,
+          "reintentos": 0,
+          "fallos_formato": 0,
+          "descartados": 0,
+          "descartados_que_eran_error": 0,
+          "descartados_que_eran_correctos": 0,
+          "tokens_generados": 2859
+        },
+        "etiquetas": {
+          "json_valido_1er_intento": 5,
+          "reintentos": 0,
+          "fallos_formato": 0,
+          "descartados": 0,
+          "descartados_que_eran_error": 0,
+          "descartados_que_eran_correctos": 0,
+          "tokens_generados": 2884
+        },
+        "orden": {
+          "json_valido_1er_intento": 5,
+          "reintentos": 0,
+          "fallos_formato": 0,
+          "descartados": 0,
+          "descartados_que_eran_error": 0,
+          "descartados_que_eran_correctos": 0,
+          "tokens_generados": 2909
+        },
+        "ambos": {
+          "json_valido_1er_intento": 5,
+          "reintentos": 0,
+          "fallos_formato": 0,
+          "descartados": 0,
+          "descartados_que_eran_error": 0,
+          "descartados_que_eran_correctos": 0,
+          "tokens_generados": 2879
+        }
+      }
+    },
+    {
+      "model_id": "qwen2.5-1.5b-hf",
+      "config": {
+        "runtime": "transformers",
+        "transformers": "5.20.2",
+        "torch": "2.13.0+cpu",
+        "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "model_id": "qwen2.5-1.5b-hf",
+        "cuantizacion": "ninguna (float32)",
+        "torch_threads": 10,
+        "do_sample": false,
+        "max_new_tokens": 1500,
+        "salida": "texto libre + validación"
+      },
+      "carga_s": 10.8,
+      "ram_mb": {
+        "inicio": 17.2,
+        "tras_carga": 5992.7,
+        "pico": 7085.3
+      },
+      "filas": [
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-hf",
+          "variante": "original",
+          "n": 5,
+          "ok": 47,
+          "null": 28,
+          "error": 0,
+          "lineas_celdas_ok": 120,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 340.2
+        },
+        {
+          "metodo": "ocr+llm:qwen2.5-1.5b-hf (sin verificar)",
+          "variante": "original",
+          "n": 5,
+          "ok": 47,
+          "null": 22,
+          "error": 6,
+          "lineas_celdas_ok": 120,
+          "lineas_celdas": 175,
+          "tiempo_medio_s": 340.2
+        }
+      ],
+      "estadisticas": {
+        "original": {
+          "json_valido_1er_intento": 4,
+          "reintentos": 1,
+          "fallos_formato": 1,
+          "descartados": 12,
+          "descartados_que_eran_error": 6,
+          "descartados_que_eran_correctos": 6,
+          "tokens_generados": 3254
+        }
+      }
+    }
+  ]
+}

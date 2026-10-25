@@ -1,0 +1,152 @@
+{
+  "campos": {
+    "numero_factura": "PR-2026-001",
+    "fecha_emision": "2026-09-01",
+    "fecha_vencimiento": "2026-10-01",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0101",
+    "emisor_nombre": "Papelería Aula Demo",
+    "emisor_id_fiscal": null,
+    "cliente_nombre": "Centro de Estudios Ejemplo",
+    "cliente_id_fiscal": "CLI-0301",
+    "cliente_email": null,
+    "forma_pago": "Transferencia",
+    "iban": "ES0000000000000000000001",
+    "base_imponible": "129.50",
+    "iva_importe": "26.74",
+    "total": "154.07"
+  },
+  "lineas": [],
+  "error": null,
+  "sin_verificar": {
+    "campos": {
+      "numero_factura": "PR-2026-001",
+      "fecha_emision": "2026-09-01",
+      "fecha_vencimiento": "2026-10-01",
+      "moneda": "EUR",
+      "numero_pedido": "PED-2026-0101",
+      "emisor_nombre": "Papelería Aula Demo",
+      "emisor_id_fiscal": "DEM-001",
+      "cliente_nombre": "Centro de Estudios Ejemplo",
+      "cliente_id_fiscal": "CLI-0301",
+      "cliente_email": null,
+      "forma_pago": "Transferencia",
+      "iban": "ES0000000000000000000001",
+      "base_imponible": "129.50",
+      "iva_importe": "26.74",
+      "total": "154.07"
+    },
+    "lineas": []
+  },
+  "descartados_sin_evidencia": {
+    "emisor_id_fiscal": "DEM-001"
+  },
+  "traza": {
+    "mensajes": [
+      {
+        "role": "system",
+        "content": "Eres un sistema de extracción de datos de facturas. Respondes solo con JSON válido."
+      },
+      {
+        "role": "user",
+        "content": "Extrae los datos de la factura del texto de abajo. El texto procede de un OCR: puede tener errores, las columnas pueden aparecer en la misma línea separadas por espacios o en líneas distintas, y las etiquetas pueden variar.\n\nCampos (objeto \"campos\"):\n- numero_factura: Identificador de la factura (p. ej. PR-2026-001).\n- fecha_emision: Fecha en que se emite la factura.\n- fecha_vencimiento: Fecha límite de pago.\n- moneda: Código de moneda de los importes (p. ej. EUR).\n- numero_pedido: Número del pedido asociado.\n- emisor_nombre: Razón social de quien emite la factura.\n- emisor_id_fiscal: Identificador fiscal del emisor.\n- cliente_nombre: Razón social del cliente.\n- cliente_id_fiscal: Identificador fiscal del cliente.\n- cliente_email: Correo electrónico del cliente.\n- forma_pago: Medio de pago (Transferencia, Tarjeta...).\n- iban: IBAN de prueba para el pago.\n- base_imponible: Base imponible tras descuentos y portes.\n- iva_importe: Cuota de IVA del resumen.\n- total: Total a pagar.\n\nLíneas de producto (lista \"lineas\", una entrada por fila de la tabla): referencia (código del artículo), descripcion, cantidad, precio_unitario, descuento_pct (porcentaje de descuento), iva_pct (porcentaje de IVA), importe (importe de la línea).\n\nReglas:\n1. Copia cada valor exactamente como aparece en el texto (mismas cifras, comas, puntos, fechas y mayúsculas). No conviertas formatos, no corrijas el OCR y no traduzcas.\n2. Si un campo no aparece, es ilegible o hay varios candidatos y no se sabe cuál es, usa null. Nunca inventes ni deduzcas un valor; no calcules importes.\n3. El emisor es quien emite/vende; el cliente es quien compra. No los confundas.\n4. Las líneas de producto se toman solo de la tabla; si no hay tabla, \"lineas\" es [].\n5. Responde solo con un objeto JSON con las claves \"campos\" y \"lineas\".\n\nTexto de la factura:\n<<<\n===== PÁGINA 1 =====\n\nFACTURA\nMaterial de oficina y formación - Datos ficticios\nNº Fra.: PR-2026-001\nSu pedido: PED-2026-0101\nFecha expedición: 01/09/2026\nAlbarán: ALB-2026-0201\nVence el: 01/10/2026\nCódigo de cliente: CLI-0301\nDivisa: EUR\nFecha de pedido: 30/08/2026\nPROVEEDOR\nDESTINATARIO\nPapelería Aula Demo\nCentro de Estudios Ejemplo\nNIF: DEMO-E-001\nNIF: DEMO-C-001\nCalle de Ejemplo, 11\nAvenida de Prácticas, 21\nCP: 00011 - Ciudad Demo\nCP: 00012 - Ciudad Ficticia\nCorreo electrónico: ventasOemisor01.example\nCorreo electrónico: comprasO cliente01.example\nTeléfono: 000 100 001\nTeléfono: 000 200 001\nCódigo\nArtículo\nCant.\nPrecio EUR\nDto. %\nIVA %\nImporte EUR\nMAT-1001\nCuadernos de notas\n5\n8,50\n0\n21\n42,50\nMAT-1002\nBolígrafos azules\n10\n2,25\n5\n21\n21,38\nMAT-1003\nCarpetas de archivo\n2\n17,50\n0\n21\n35,00\nMAT-1004\nEtiquetas adhesivas\n3\n3,50\n10\n21\n9,45\nMAT-1005\nFundas transparentes\n4\n4,75\n0\n21\n19,00\nPAGO Y ENTREGA\nSubtotal sin descuentos\n129,50 EUR\nModo de pago: Transferencia\nDescuento en líneas\n2,17 EUR\nCondiciones: 30 días desde emisión\nPortes\n0,00 EUR\nReferencia de pago: PAGO-2026-001\nBase de cálculo\n127,33 EUR\nCuenta (IBAN):\nES00 0000 0000 0000 0000 0001\nCuota IVA 21%\n26,74 EUR\nEntrega: almacén del cliente\nImporte total\n154,07 EUR\nDirección: Avenida de Prácticas, 21\n00012 : Ciudad Ficticia\nObservaciones: entregar de 09:00 a 14:00. Contacto: Recepción Demo.\nLos importes de línea incluyen el descuento indicado; el IVA se añade en el resumen.\nDocumento ficticio para una práctica. Identificadores, contactos y cuenta son de prueba.\nPágina 1 de 1.\n\n>>>"
+      }
+    ],
+    "intentos": [
+      {
+        "respuesta": "{\"campos\": {\"numero_factura\": \"PR-2026-001\", \"fecha_emision\": \"01/09/2026\", \"fecha_vencimiento\": \"01/10/2026\", \"moneda\": \"EUR\", \"numero_pedido\": \"PED-2026-0101\", \"emisor_nombre\": \"Papelería Aula Demo\", \"emisor_id_fiscal\": \"DEM-001\", \"cliente_nombre\": \"Centro de Estudios Ejemplo\", \"cliente_id_fiscal\": \"CLI-0301\", \"cliente_email\": \"ventasOemisor01.example\", \"forma_pago\": \"Transferencia\", \"iban\": \"ES00 0000 0000 0000 0000 0001\", \"base_imponible\": \"129,50 EUR\", \"iva_importe\": \"26,74 EUR\", \"total\": \"154,07 EUR\"}, \"lineas\": []}",
+        "tiempo_s": 11.64,
+        "prompt_tokens": 1287,
+        "completion_tokens": 234,
+        "valido": true
+      }
+    ]
+  },
+  "tiempo_s": 11.64,
+  "config": {
+    "runtime": "llama.cpp",
+    "llama_cpp_python": "0.3.36",
+    "repo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "archivo": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "model_id": "qwen2.5-1.5b-q4",
+    "cuantizacion": "Q4_K_M",
+    "n_ctx": 4096,
+    "n_threads": 10,
+    "temperature": 0.0,
+    "max_tokens": 1500,
+    "salida": "json_schema (gramática)"
+  },
+  "evaluacion": {
+    "ok": 11,
+    "null": 2,
+    "error": 2,
+    "campos": {
+      "numero_factura": "ok",
+      "fecha_emision": "ok",
+      "fecha_vencimiento": "ok",
+      "moneda": "ok",
+      "numero_pedido": "ok",
+      "emisor_nombre": "ok",
+      "emisor_id_fiscal": "null",
+      "cliente_nombre": "ok",
+      "cliente_id_fiscal": "error",
+      "cliente_email": "null",
+      "forma_pago": "ok",
+      "iban": "ok",
+      "base_imponible": "error",
+      "iva_importe": "ok",
+      "total": "ok"
+    },
+    "lineas_celdas_ok": 0,
+    "lineas_celdas": 35,
+    "errores": {
+      "cliente_id_fiscal": {
+        "pred": "CLI-0301",
+        "gold": "DEMO-C-001"
+      },
+      "base_imponible": {
+        "pred": "129.50",
+        "gold": "127.33"
+      }
+    }
+  },
+  "evaluacion_sin_verificar": {
+    "ok": 11,
+    "null": 1,
+    "error": 3,
+    "campos": {
+      "numero_factura": "ok",
+      "fecha_emision": "ok",
+      "fecha_vencimiento": "ok",
+      "moneda": "ok",
+      "numero_pedido": "ok",
+      "emisor_nombre": "ok",
+      "emisor_id_fiscal": "error",
+      "cliente_nombre": "ok",
+      "cliente_id_fiscal": "error",
+      "cliente_email": "null",
+      "forma_pago": "ok",
+      "iban": "ok",
+      "base_imponible": "error",
+      "iva_importe": "ok",
+      "total": "ok"
+    },
+    "lineas_celdas_ok": 0,
+    "lineas_celdas": 35,
+    "errores": {
+      "emisor_id_fiscal": {
+        "pred": "DEM-001",
+        "gold": "DEMO-E-001"
+      },
+      "cliente_id_fiscal": {
+        "pred": "CLI-0301",
+        "gold": "DEMO-C-001"
+      },
+      "base_imponible": {
+        "pred": "129.50",
+        "gold": "127.33"
+      }
+    }
+  }
+}

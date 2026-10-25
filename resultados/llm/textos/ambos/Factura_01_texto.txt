@@ -1,0 +1,93 @@
+===== PÁGINA 1 =====
+
+FACTURA
+Material de oficina y formación - Datos ficticios
+Nº Fra.: PR-2026-001
+Su pedido: PED-2026-0101
+Fecha expedición: 01/09/2026
+Albarán: ALB-2026-0201
+Vence el: 01/10/2026
+Código de cliente: CLI-0301
+Divisa: EUR
+Fecha de pedido: 30/08/2026
+PROVEEDOR
+DESTINATARIO
+Papelería Aula Demo
+Centro de Estudios Ejemplo
+NIF: DEMO-E-001
+NIF: DEMO-C-001
+Calle de Ejemplo, 11
+Avenida de Prácticas, 21
+CP: 00011 - Ciudad Demo
+CP: 00012 - Ciudad Ficticia
+Correo electrónico: ventasOemisor01.example
+Correo electrónico: comprasO cliente01.example
+Teléfono: 000 100 001
+Teléfono: 000 200 001
+Código
+Artículo
+Cant.
+Precio EUR
+Dto. %
+IVA %
+Importe EUR
+MAT-1001
+Cuadernos de notas
+5
+8,50
+0
+21
+42,50
+MAT-1002
+Bolígrafos azules
+10
+2,25
+5
+21
+21,38
+MAT-1003
+Carpetas de archivo
+2
+17,50
+0
+21
+35,00
+MAT-1004
+Etiquetas adhesivas
+3
+3,50
+10
+21
+9,45
+MAT-1005
+Fundas transparentes
+4
+4,75
+0
+21
+19,00
+PAGO Y ENTREGA
+Subtotal sin descuentos
+129,50 EUR
+Modo de pago: Transferencia
+Descuento en líneas
+2,17 EUR
+Condiciones: 30 días desde emisión
+Portes
+0,00 EUR
+Referencia de pago: PAGO-2026-001
+Base de cálculo
+127,33 EUR
+Cuenta (IBAN):
+ES00 0000 0000 0000 0000 0001
+Cuota IVA 21%
+26,74 EUR
+Entrega: almacén del cliente
+Importe total
+154,07 EUR
+Dirección: Avenida de Prácticas, 21
+00012 : Ciudad Ficticia
+Observaciones: entregar de 09:00 a 14:00. Contacto: Recepción Demo.
+Los importes de línea incluyen el descuento indicado; el IVA se añade en el resumen.
+Documento ficticio para una práctica. Identificadores, contactos y cuenta son de prueba.
+Página 1 de 1.

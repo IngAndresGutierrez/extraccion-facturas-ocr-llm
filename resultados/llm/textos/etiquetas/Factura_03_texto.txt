@@ -1,0 +1,37 @@
+===== PÁGINA 1 =====
+
+FACTURA
+Material de oficina y formación - Datos ficticios
+Nº Fra.: PR-2026-003                    Su pedido: PED-2026-0103
+Fecha expedición: 09/09/2026                          Albarán: ALB-2026-0203
+Vence el: 09/10/2026                      Código de cliente: CLI-0303
+Divisa: EUR                                           Fecha de pedido: 07/09/2026
+PROVEEDOR                                              DESTINATARIO
+Material Escolar Demo                                  Aula de Formación Ejemplo
+NIF: DEMO-E-003                                   NIF: DEMO-C-003
+Calle de Ejemplo, 13                                    Avenida de Prácticas, 23
+CP: 00031 - Ciudad Demo                               CP: 00032 - Ciudad Ficticia
+Correo electrónico: ventasOemisor03.example                       Correo electrónico: comprasO cliente03.example
+Teléfono: 000 100 003                                  Teléfono: 000 200 003
+Código  Artículo                             Cant.   Precio EUR  Dto. %   IVA %  Importe EUR
+MAT-3001    Archivadores                                 6         15,50       0       21          93,00
+MAT-3002    Agendas escolares                            4          9,75       5       21          37,05
+MAT-3003    Lápices de grafito                             3          2,40       0       21           7,20
+MAT-3004    Etiquetas adhesivas                           5          3,50      10       21          15,75
+MAT-3005    Fundas transparentes                         4          4,75       0       21          19,00
+PAGO Y ENTREGA                                    Subtotal sin descuentos                175,70 EUR
+Modo de pago: Transferencia                            Descuento en líneas                      3,70 EUR
+Condiciones: 30 días desde emisión
+Portes                                   0,00 EUR
+Referencia de pago: PAGO-2026-003
+Base de cálculo                        172,00 EUR
+Cuenta (IBAN):
+ES00 0000 0000 0000 0000 0003                        Cuota IVA 21%                              36,12 EUR
+Entrega: almacén del cliente
+Importe total                            208,12 EUR
+Dirección: Avenida de Prácticas, 23
+00032 : Ciudad Ficticia
+Observaciones: entregar de 09:00 a 14:00. Contacto: Recepción Demo.
+Los importes de línea incluyen el descuento indicado; el IVA se añade en el resumen.
+Documento ficticio para una práctica. Identificadores, contactos y cuenta son de prueba.
+Página 1 de 1.
