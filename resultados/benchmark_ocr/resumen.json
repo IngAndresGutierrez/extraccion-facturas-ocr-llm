@@ -1,0 +1,618 @@
+{
+  "hardware": {
+    "arquitectura": "aarch64",
+    "cpus": 10,
+    "so": "Linux-7.0.14-linuxkit-aarch64-with-glibc2.41",
+    "ram_total_mb": 7934.1,
+    "ram_disponible_mb": 7108.9,
+    "host": "Apple M5, 16 GB (macOS); Docker Desktop VM linux/arm64",
+    "python": "3.11.17"
+  },
+  "runs": [
+    {
+      "config": {
+        "engine": "tesseract",
+        "version": "5.5.0",
+        "lang": "spa",
+        "psm": 3,
+        "oem": 1,
+        "preprocesado": "none",
+        "dpi": 250
+      },
+      "carga_s": 0.0,
+      "ram_mb": {
+        "inicio": 137.9,
+        "tras_carga": 138.3,
+        "pico_python": 235.0,
+        "pico_hijos": 97.0,
+        "pico_total": 313.8
+      },
+      "torch_threads": 10,
+      "docs": [
+        {
+          "pdf": "Factura_01_texto",
+          "tiempo_s": 0.8,
+          "ok": 13,
+          "null": 2,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email",
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_02_texto",
+          "tiempo_s": 0.78,
+          "ok": 13,
+          "null": 2,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email",
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_03_texto",
+          "tiempo_s": 0.74,
+          "ok": 13,
+          "null": 2,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email",
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_04_imagen",
+          "tiempo_s": 0.74,
+          "ok": 13,
+          "null": 2,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email",
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_05_imagen",
+          "tiempo_s": 0.76,
+          "ok": 13,
+          "null": 2,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email",
+            "iban"
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "engine": "tesseract",
+        "version": "5.5.0",
+        "lang": "spa",
+        "psm": 3,
+        "oem": 1,
+        "preprocesado": "binarize",
+        "dpi": 250
+      },
+      "carga_s": 0.0,
+      "ram_mb": {
+        "inicio": 138.2,
+        "tras_carga": 138.6,
+        "pico_python": 233.5,
+        "pico_hijos": 55.9,
+        "pico_total": 272.5
+      },
+      "torch_threads": 10,
+      "docs": [
+        {
+          "pdf": "Factura_01_texto",
+          "tiempo_s": 0.66,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email"
+          ]
+        },
+        {
+          "pdf": "Factura_02_texto",
+          "tiempo_s": 0.63,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email"
+          ]
+        },
+        {
+          "pdf": "Factura_03_texto",
+          "tiempo_s": 0.62,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email"
+          ]
+        },
+        {
+          "pdf": "Factura_04_imagen",
+          "tiempo_s": 0.65,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email"
+          ]
+        },
+        {
+          "pdf": "Factura_05_imagen",
+          "tiempo_s": 0.64,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email"
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "torch": "2.13.0+cpu",
+        "lang": "es",
+        "detector": "craft_mlt_25k",
+        "recognizer": "latin_g2",
+        "preprocesado": "none",
+        "dpi": 250
+      },
+      "carga_s": 2.26,
+      "ram_mb": {
+        "inicio": 138.3,
+        "tras_carga": 583.9,
+        "pico_python": 5446.6,
+        "pico_hijos": 0.0,
+        "pico_total": 5446.6
+      },
+      "torch_threads": 10,
+      "docs": [
+        {
+          "pdf": "Factura_01_texto",
+          "tiempo_s": 17.15,
+          "ok": 13,
+          "null": 1,
+          "error": 1,
+          "lineas_celdas_ok": 14,
+          "lineas_celdas": 35,
+          "errores": {
+            "cliente_email": {
+              "pred": "compras@clienteol.example",
+              "gold": "compras@cliente01.example"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_02_texto",
+          "tiempo_s": 16.56,
+          "ok": 13,
+          "null": 2,
+          "error": 0,
+          "lineas_celdas_ok": 14,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email",
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_03_texto",
+          "tiempo_s": 16.85,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 14,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_04_imagen",
+          "tiempo_s": 16.22,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 14,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_05_imagen",
+          "tiempo_s": 16.63,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 14,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "iban"
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "torch": "2.13.0+cpu",
+        "lang": "es",
+        "detector": "craft_mlt_25k",
+        "recognizer": "latin_g2",
+        "preprocesado": "binarize",
+        "dpi": 250
+      },
+      "carga_s": 2.43,
+      "ram_mb": {
+        "inicio": 138.6,
+        "tras_carga": 583.9,
+        "pico_python": 5450.9,
+        "pico_hijos": 0.0,
+        "pico_total": 5450.9
+      },
+      "torch_threads": 10,
+      "docs": [
+        {
+          "pdf": "Factura_01_texto",
+          "tiempo_s": 16.55,
+          "ok": 13,
+          "null": 2,
+          "error": 0,
+          "lineas_celdas_ok": 7,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email",
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_02_texto",
+          "tiempo_s": 16.58,
+          "ok": 13,
+          "null": 2,
+          "error": 0,
+          "lineas_celdas_ok": 7,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "cliente_email",
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_03_texto",
+          "tiempo_s": 16.26,
+          "ok": 13,
+          "null": 1,
+          "error": 1,
+          "lineas_celdas_ok": 7,
+          "lineas_celdas": 35,
+          "errores": {
+            "cliente_email": {
+              "pred": "compras@clienteo03.example",
+              "gold": "compras@cliente03.example"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_04_imagen",
+          "tiempo_s": 16.62,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 7,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_05_imagen",
+          "tiempo_s": 16.7,
+          "ok": 13,
+          "null": 1,
+          "error": 1,
+          "lineas_celdas_ok": 0,
+          "lineas_celdas": 35,
+          "errores": {
+            "cliente_email": {
+              "pred": "compras@clienteos.example",
+              "gold": "compras@cliente05.example"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "engine": "doctr",
+        "version": "v1.1.0",
+        "torch": "2.13.0+cpu",
+        "detector": "fast_base",
+        "recognizer": "crnn_vgg16_bn",
+        "vocab": "126 caracteres (francés)",
+        "preprocesado": "none",
+        "dpi": 250
+      },
+      "carga_s": 2.6,
+      "ram_mb": {
+        "inicio": 138.0,
+        "tras_carga": 823.8,
+        "pico_python": 1545.5,
+        "pico_hijos": 0.2,
+        "pico_total": 1546.5
+      },
+      "torch_threads": 10,
+      "docs": [
+        {
+          "pdf": "Factura_01_texto",
+          "tiempo_s": 3.34,
+          "ok": 13,
+          "null": 1,
+          "error": 1,
+          "lineas_celdas_ok": 34,
+          "lineas_celdas": 35,
+          "errores": {
+            "emisor_nombre": {
+              "pred": "Papeleria Aula Demo",
+              "gold": "Papelería Aula Demo"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_02_texto",
+          "tiempo_s": 3.72,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_03_texto",
+          "tiempo_s": 3.62,
+          "ok": 13,
+          "null": 1,
+          "error": 1,
+          "lineas_celdas_ok": 34,
+          "lineas_celdas": 35,
+          "errores": {
+            "cliente_nombre": {
+              "pred": "Aula de Formacion Ejemplo",
+              "gold": "Aula de Formación Ejemplo"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_04_imagen",
+          "tiempo_s": 3.63,
+          "ok": 12,
+          "null": 1,
+          "error": 2,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {
+            "emisor_nombre": {
+              "pred": "Papeleria Taller Demo",
+              "gold": "Papelería Taller Demo"
+            },
+            "forma_pago": {
+              "pred": "Domiciliacion",
+              "gold": "Domiciliación"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_05_imagen",
+          "tiempo_s": 3.76,
+          "ok": 12,
+          "null": 1,
+          "error": 2,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {
+            "emisor_nombre": {
+              "pred": "Oficina Didactica Demo",
+              "gold": "Oficina Didáctica Demo"
+            },
+            "cliente_nombre": {
+              "pred": "Instituto de Prâcticas Ejemplo",
+              "gold": "Instituto de Prácticas Ejemplo"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "engine": "doctr",
+        "version": "v1.1.0",
+        "torch": "2.13.0+cpu",
+        "detector": "fast_base",
+        "recognizer": "crnn_vgg16_bn",
+        "vocab": "126 caracteres (francés)",
+        "preprocesado": "binarize",
+        "dpi": 250
+      },
+      "carga_s": 2.38,
+      "ram_mb": {
+        "inicio": 138.2,
+        "tras_carga": 843.7,
+        "pico_python": 1581.2,
+        "pico_hijos": 0.0,
+        "pico_total": 1581.9
+      },
+      "torch_threads": 10,
+      "docs": [
+        {
+          "pdf": "Factura_01_texto",
+          "tiempo_s": 3.34,
+          "ok": 13,
+          "null": 1,
+          "error": 1,
+          "lineas_celdas_ok": 34,
+          "lineas_celdas": 35,
+          "errores": {
+            "emisor_nombre": {
+              "pred": "Papeleria Aula Demo",
+              "gold": "Papelería Aula Demo"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_02_texto",
+          "tiempo_s": 3.72,
+          "ok": 14,
+          "null": 1,
+          "error": 0,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {},
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_03_texto",
+          "tiempo_s": 3.64,
+          "ok": 13,
+          "null": 1,
+          "error": 1,
+          "lineas_celdas_ok": 34,
+          "lineas_celdas": 35,
+          "errores": {
+            "cliente_nombre": {
+              "pred": "Aula de Formacion Ejemplo",
+              "gold": "Aula de Formación Ejemplo"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_04_imagen",
+          "tiempo_s": 3.67,
+          "ok": 12,
+          "null": 1,
+          "error": 2,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {
+            "emisor_nombre": {
+              "pred": "Papeleria Taller Demo",
+              "gold": "Papelería Taller Demo"
+            },
+            "forma_pago": {
+              "pred": "Domiciliacion",
+              "gold": "Domiciliación"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        },
+        {
+          "pdf": "Factura_05_imagen",
+          "tiempo_s": 3.69,
+          "ok": 12,
+          "null": 1,
+          "error": 2,
+          "lineas_celdas_ok": 35,
+          "lineas_celdas": 35,
+          "errores": {
+            "emisor_nombre": {
+              "pred": "Oficina Didactica Demo",
+              "gold": "Oficina Didáctica Demo"
+            },
+            "cliente_nombre": {
+              "pred": "Instituto de Prâcticas Ejemplo",
+              "gold": "Instituto de Prácticas Ejemplo"
+            }
+          },
+          "nulls": [
+            "iban"
+          ]
+        }
+      ]
+    }
+  ]
+}

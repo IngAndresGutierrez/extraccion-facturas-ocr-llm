@@ -1,0 +1,91 @@
+{
+  "campos": {
+    "numero_factura": "PR-2026-005",
+    "fecha_emision": "2026-09-22",
+    "fecha_vencimiento": "2026-10-22",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0105",
+    "emisor_nombre": "Oficina Didáctica Demo",
+    "emisor_id_fiscal": "DEMO-E-005",
+    "cliente_nombre": "Instituto de Prácticas Ejemplo",
+    "cliente_id_fiscal": "DEMO-C-005",
+    "cliente_email": null,
+    "forma_pago": "Transferencia",
+    "iban": null,
+    "base_imponible": "228.63",
+    "iva_importe": "48.01",
+    "total": "276.64"
+  },
+  "lineas": [
+    {
+      "referencia": "MAT-5001",
+      "descripcion": "Sobres de correspondencia",
+      "cantidad": "8",
+      "precio_unitario": "4.60",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "36.80"
+    },
+    {
+      "referencia": "MAT-5002",
+      "descripcion": "Organizadores de mesa",
+      "cantidad": "6",
+      "precio_unitario": "11.25",
+      "descuento_pct": "5",
+      "iva_pct": "21",
+      "importe": "64.13"
+    },
+    {
+      "referencia": "MAT-5003",
+      "descripcion": "Cajas de almacenamiento",
+      "cantidad": "3",
+      "precio_unitario": "27.80",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "83.40"
+    },
+    {
+      "referencia": "MAT-5004",
+      "descripcion": "Etiquetas adhesivas",
+      "cantidad": "7",
+      "precio_unitario": "3.50",
+      "descuento_pct": "10",
+      "iva_pct": "21",
+      "importe": "22.05"
+    },
+    {
+      "referencia": "MAT-5005",
+      "descripcion": "Fundas transparentes",
+      "cantidad": "4",
+      "precio_unitario": "4.75",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "19.00"
+    }
+  ],
+  "evaluacion": {
+    "ok": 13,
+    "null": 2,
+    "error": 0,
+    "campos": {
+      "numero_factura": "ok",
+      "fecha_emision": "ok",
+      "fecha_vencimiento": "ok",
+      "moneda": "ok",
+      "numero_pedido": "ok",
+      "emisor_nombre": "ok",
+      "emisor_id_fiscal": "ok",
+      "cliente_nombre": "ok",
+      "cliente_id_fiscal": "ok",
+      "cliente_email": "null",
+      "forma_pago": "ok",
+      "iban": "null",
+      "base_imponible": "ok",
+      "iva_importe": "ok",
+      "total": "ok"
+    },
+    "lineas_celdas_ok": 35,
+    "lineas_celdas": 35,
+    "errores": {}
+  }
+}

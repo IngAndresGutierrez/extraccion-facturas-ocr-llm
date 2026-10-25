@@ -63,7 +63,71 @@ class TesseractOCR:
         return words
 
 
-ENGINES = {"tesseract": TesseractOCR}
+class EasyOCR:
+    """PyTorch: detector CRAFT (craft_mlt_25k) + reconocedor CRNN 'latin_g2' (incluye á, é, í, ó, ú, ñ)."""
+    name = "easyocr"
+
+    def __init__(self, lang: str = "es"):
+        import os
+        import easyocr
+        import torch
+        self._version, self._torch = easyocr.__version__, torch.__version__
+        self.lang = lang
+        self.reader = easyocr.Reader([lang], gpu=False, verbose=False,
+                                     model_storage_directory=os.path.join(os.environ.get("MODELS_DIR", "/models"), "easyocr"),
+                                     download_enabled=False)
+
+    @property
+    def config(self) -> dict:
+        return {"engine": "easyocr", "version": self._version, "torch": self._torch, "lang": self.lang,
+                "detector": "craft_mlt_25k", "recognizer": "latin_g2"}
+
+    def read(self, image: Image.Image) -> list[Word]:
+        import numpy as np
+        words = []
+        for box, txt, conf in self.reader.readtext(np.array(image.convert("RGB")), detail=1, paragraph=False):
+            if txt.strip():
+                xs, ys = [p[0] for p in box], [p[1] for p in box]
+                words.append(Word(txt.strip(), int(min(xs)), int(min(ys)), int(max(xs)), int(max(ys)),
+                                  round(float(conf) * 100, 1)))
+        return words
+
+
+class DocTR:
+    """PyTorch: detector FAST (fast_base) + reconocedor CRNN (crnn_vgg16_bn), modelos oficiales de docTR.
+    Ojo: su vocabulario no incluye á, í, ó, ú ni ñ."""
+    name = "doctr"
+
+    def __init__(self, det_arch: str = "fast_base", reco_arch: str = "crnn_vgg16_bn"):
+        import doctr
+        import torch
+        from doctr.models import ocr_predictor
+        self._version, self._torch = doctr.__version__, torch.__version__
+        self.det_arch, self.reco_arch = det_arch, reco_arch
+        self.predictor = ocr_predictor(det_arch=det_arch, reco_arch=reco_arch, pretrained=True)
+
+    @property
+    def config(self) -> dict:
+        return {"engine": "doctr", "version": self._version, "torch": self._torch,
+                "detector": self.det_arch, "recognizer": self.reco_arch,
+                "vocab": f"{len(self.predictor.reco_predictor.model.vocab)} caracteres (francés)"}
+
+    def read(self, image: Image.Image) -> list[Word]:
+        import numpy as np
+        page = self.predictor([np.array(image.convert("RGB"))]).pages[0]
+        w, h = image.size
+        words = []
+        for block in page.blocks:
+            for line in block.lines:
+                for wd in line.words:
+                    (x0, y0), (x1, y1) = wd.geometry
+                    if wd.value.strip():
+                        words.append(Word(wd.value.strip(), int(x0 * w), int(y0 * h), int(x1 * w), int(y1 * h),
+                                          round(float(wd.confidence) * 100, 1)))
+        return words
+
+
+ENGINES = {"tesseract": TesseractOCR, "easyocr": EasyOCR, "doctr": DocTR}
 
 
 def get_engine(name: str, **kwargs):

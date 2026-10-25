@@ -1,0 +1,34 @@
+===== PÁGINA 1 =====
+
+FACTURA
+Material de oficina y formación Datos ficticios
+Número de factura: PR-2026-002                  Pedido: PED-2026-0102
+Fecha de emisión: 04/09/2026                       Albarán: ALB-2026-0202
+Fecha de vencimiento: 04/10/2026                   Código de cliente: CLI-0302
+Moneda: EUR                                      Fecha de pedido: 02/09/2026
+EMISOR                                         CLIENTE
+Suministros Campus Demo                          Academia Horizonte Ficticia
+ID fiscal: DEMO-E-002                               ID fiscal: DEMO-C-002
+Calle de Ejemplo, 12                                Avenida de Prácticas, 22
+CP: 00021 Ciudad Demo                           CP: 00022 Ciudad Ficticia
+Email: ventas@emisoro2.example                    Email: compras@clienteo2. example
+Teléfono: 000 100 002                              Teléfono: 000 200 002
+Referencia Descripción                          Cant.  Precio EUR Dto. %   IVA % Importe EUR
+MAT-2001   Paquetes de papel                                  12,30             21        49,20
+MAT-2002   Rotuladores de colores                      3        7,40      5      21        21,09
+MAT-2003   Grapadoras                               2        8,80             21        17,60
+MAT-2004   Etiquetas adhesivas                        4        3,50     10     21        12,60
+MAT-2005   Fundas transparentes                       4        4,75             21        19,00
+PAGO Y ENTREGA                                Subtotal sin descuentos             122,00 EUR
+Forma de pago: Tarjeta                              Descuento en Iíneas                   2,51 EUR
+Condiciones: 30 días desde emisión                    Portes                               4,50 EUR
+Referencia de pago: PAGO-2026-002
+IBAN de prueba:                                    Base imponible                     123,99 EUR
+EsOO 0000 0000 0000 0000 0002                     IVA (21 %)                          26,04 EUR
+Entrega: almacén del cliente
+Dirección: Avenida de Prácticas, 22                    TOTAL                         150,03 EUR
+00022 Ciudad Ficticia
+Observaciones: entregar de 09:00 a 14.00. Contacto: Recepción Demo.
+Los importes de Iínea incluyen el descuento indicado; el IVA se añade en el resumen.
+Documento ficticio para una práctica. Identificadores, contactos y cuenta son de prueba_
+Página 1 de 1-

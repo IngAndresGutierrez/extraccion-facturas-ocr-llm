@@ -1,0 +1,100 @@
+{
+  "campos": {
+    "numero_factura": "PR-2026-004",
+    "fecha_emision": "2026-09-15",
+    "fecha_vencimiento": "2026-10-15",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0104",
+    "emisor_nombre": "Papeleria Taller Demo",
+    "emisor_id_fiscal": "DEMO-E-004",
+    "cliente_nombre": "Centro Cultural Ficticio",
+    "cliente_id_fiscal": "DEMO-C-004",
+    "cliente_email": "compras@cliente04.example",
+    "forma_pago": "Domiciliacion",
+    "iban": null,
+    "base_imponible": "201.48",
+    "iva_importe": "42.31",
+    "total": "243.79"
+  },
+  "lineas": [
+    {
+      "referencia": "MAT-4001",
+      "descripcion": "Blocs de dibujo",
+      "cantidad": "12",
+      "precio_unitario": "3.25",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "39.00"
+    },
+    {
+      "referencia": "MAT-4002",
+      "descripcion": "Cajas de acuarelas",
+      "cantidad": "5",
+      "precio_unitario": "18.90",
+      "descuento_pct": "5",
+      "iva_pct": "21",
+      "importe": "89.78"
+    },
+    {
+      "referencia": "MAT-4003",
+      "descripcion": "Pinceles surtidos",
+      "cantidad": "2",
+      "precio_unitario": "14.40",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "28.80"
+    },
+    {
+      "referencia": "MAT-4004",
+      "descripcion": "Etiquetas adhesivas",
+      "cantidad": "6",
+      "precio_unitario": "3.50",
+      "descuento_pct": "10",
+      "iva_pct": "21",
+      "importe": "18.90"
+    },
+    {
+      "referencia": "MAT-4005",
+      "descripcion": "Fundas transparentes",
+      "cantidad": "4",
+      "precio_unitario": "4.75",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "19.00"
+    }
+  ],
+  "evaluacion": {
+    "ok": 12,
+    "null": 1,
+    "error": 2,
+    "campos": {
+      "numero_factura": "ok",
+      "fecha_emision": "ok",
+      "fecha_vencimiento": "ok",
+      "moneda": "ok",
+      "numero_pedido": "ok",
+      "emisor_nombre": "error",
+      "emisor_id_fiscal": "ok",
+      "cliente_nombre": "ok",
+      "cliente_id_fiscal": "ok",
+      "cliente_email": "ok",
+      "forma_pago": "error",
+      "iban": "null",
+      "base_imponible": "ok",
+      "iva_importe": "ok",
+      "total": "ok"
+    },
+    "lineas_celdas_ok": 35,
+    "lineas_celdas": 35,
+    "errores": {
+      "emisor_nombre": {
+        "pred": "Papeleria Taller Demo",
+        "gold": "Papelería Taller Demo"
+      },
+      "forma_pago": {
+        "pred": "Domiciliacion",
+        "gold": "Domiciliación"
+      }
+    }
+  }
+}

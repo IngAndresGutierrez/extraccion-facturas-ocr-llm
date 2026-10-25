@@ -1,0 +1,34 @@
+===== PÁGINA 1 =====
+
+FACTURA
+Material de oficina y formacion - Datos ficticios
+Numero de factura: PR-2026-005                Pedido: PED-2026-0105
+Fecha de emision: 22/09/2026                     Albaran: ALB-2026-0205
+Fecha de vencimiento: 22/10/2026                  Côdigo de cliente: CLI-0305
+Moneda: EUR                                   Fecha de pedido: 20/09/2026
+EMISOR                                      CLIENTE
+Oficina Didactica Demo                           Instituto de Prâcticas Ejemplo
+ID fiscal: DEMO-E-005                            ID fiscal: DEMO-C-005
+Calle de Ejemplo, 15                             Avenida de Prâcticas, 25
+CP: 00051 - Ciudad Demo                         CP: 00052 : Ciudad Ficticia
+Email: ventas@emisor05.example                  Email: compras@cliente05.example
+Teléfono: 000 100 005                           Teléfono: 000 200 005
+Referencia Descripcion                        Cant. Precio EUR Dto. %  IVA % Importe EUR
+MAT-5001   Sobres de correspondencia                 8       4,60     0     21       36,80
+MAT-5002   Organizadores de mesa                   6       11,25      5     21       64,13
+MAT-5003   Cajas de almacenamiento                 3      27,80      0     21       83,40
+MAT-5004   Etiquetas adhesivas                      7       3,50     10     21       22,05
+MAT-5005   Fundas transparentes                     4       4,75     0     21        19,00
+PAGO Y ENTREGA                             Subtotal sin descuentos            231,20 EUR
+Forma de pago: Transferencia                      Descuento en lineas                 5,82 EUR
+Condiciones: 30 dias desde emision                  Portes                             3,25 EUR
+Referencia de pago: PAGO-2026-005
+IBAN de prueba:                                 Base imponible                   228,63 EUR
+ESOO 0000 0000 0000 0000 0005                   IVA (21 %)                        48,01 EUR
+Entrega: almacén del cliente
+Direccion: Avenida de Prâcticas, 25                  TOTAL                       276,64 EUR
+00052 Ciudad Ficticia
+Observaciones: entregar de 09:00 a 14:00. Contacto: Recepcion Demo.
+Los importes de linea incluyen el descuento indicado; el IVA se anade en el resumen.
+Documento ficticio para una prâctica. Identificadores, contactos y cuenta son de prueba.
+Pagina 1 de 1.

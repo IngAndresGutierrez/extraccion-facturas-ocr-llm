@@ -1,0 +1,69 @@
+{
+  "campos": {
+    "numero_factura": "PR-2026-001",
+    "fecha_emision": "2026-09-01",
+    "fecha_vencimiento": "2026-10-01",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0101",
+    "emisor_nombre": "Papelería Aula Demo",
+    "emisor_id_fiscal": "DEMO-E-001",
+    "cliente_nombre": "Centro de Estudios Ejemplo",
+    "cliente_id_fiscal": "DEMO-C-001",
+    "cliente_email": "compras@clienteol.example",
+    "forma_pago": "Transferencia",
+    "iban": null,
+    "base_imponible": "127.33",
+    "iva_importe": "26.74",
+    "total": "154.07"
+  },
+  "lineas": [
+    {
+      "referencia": "MAT-1002",
+      "descripcion": "Bolígrafos azules",
+      "cantidad": "10",
+      "precio_unitario": "2.25",
+      "descuento_pct": "5",
+      "iva_pct": "21",
+      "importe": "21.38"
+    },
+    {
+      "referencia": "MAT-1004",
+      "descripcion": "Etiquetas adhesivas",
+      "cantidad": "3",
+      "precio_unitario": "3.50",
+      "descuento_pct": "10",
+      "iva_pct": "21",
+      "importe": "9.45"
+    }
+  ],
+  "evaluacion": {
+    "ok": 13,
+    "null": 1,
+    "error": 1,
+    "campos": {
+      "numero_factura": "ok",
+      "fecha_emision": "ok",
+      "fecha_vencimiento": "ok",
+      "moneda": "ok",
+      "numero_pedido": "ok",
+      "emisor_nombre": "ok",
+      "emisor_id_fiscal": "ok",
+      "cliente_nombre": "ok",
+      "cliente_id_fiscal": "ok",
+      "cliente_email": "error",
+      "forma_pago": "ok",
+      "iban": "null",
+      "base_imponible": "ok",
+      "iva_importe": "ok",
+      "total": "ok"
+    },
+    "lineas_celdas_ok": 14,
+    "lineas_celdas": 35,
+    "errores": {
+      "cliente_email": {
+        "pred": "compras@clienteol.example",
+        "gold": "compras@cliente01.example"
+      }
+    }
+  }
+}

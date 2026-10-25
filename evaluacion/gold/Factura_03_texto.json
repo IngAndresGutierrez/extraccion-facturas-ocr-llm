@@ -1,0 +1,66 @@
+{
+  "campos": {
+    "numero_factura": "PR-2026-003",
+    "fecha_emision": "2026-09-09",
+    "fecha_vencimiento": "2026-10-09",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0103",
+    "emisor_nombre": "Material Escolar Demo",
+    "emisor_id_fiscal": "DEMO-E-003",
+    "cliente_nombre": "Aula de Formación Ejemplo",
+    "cliente_id_fiscal": "DEMO-C-003",
+    "cliente_email": "compras@cliente03.example",
+    "forma_pago": "Transferencia",
+    "iban": "ES0000000000000000000003",
+    "base_imponible": "172.00",
+    "iva_importe": "36.12",
+    "total": "208.12"
+  },
+  "lineas": [
+    {
+      "referencia": "MAT-3001",
+      "descripcion": "Archivadores",
+      "cantidad": "6",
+      "precio_unitario": "15.50",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "93.00"
+    },
+    {
+      "referencia": "MAT-3002",
+      "descripcion": "Agendas escolares",
+      "cantidad": "4",
+      "precio_unitario": "9.75",
+      "descuento_pct": "5",
+      "iva_pct": "21",
+      "importe": "37.05"
+    },
+    {
+      "referencia": "MAT-3003",
+      "descripcion": "Lápices de grafito",
+      "cantidad": "3",
+      "precio_unitario": "2.40",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "7.20"
+    },
+    {
+      "referencia": "MAT-3004",
+      "descripcion": "Etiquetas adhesivas",
+      "cantidad": "5",
+      "precio_unitario": "3.50",
+      "descuento_pct": "10",
+      "iva_pct": "21",
+      "importe": "15.75"
+    },
+    {
+      "referencia": "MAT-3005",
+      "descripcion": "Fundas transparentes",
+      "cantidad": "4",
+      "precio_unitario": "4.75",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "19.00"
+    }
+  ]
+}

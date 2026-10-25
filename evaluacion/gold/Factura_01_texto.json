@@ -1,0 +1,66 @@
+{
+  "campos": {
+    "numero_factura": "PR-2026-001",
+    "fecha_emision": "2026-09-01",
+    "fecha_vencimiento": "2026-10-01",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0101",
+    "emisor_nombre": "Papelería Aula Demo",
+    "emisor_id_fiscal": "DEMO-E-001",
+    "cliente_nombre": "Centro de Estudios Ejemplo",
+    "cliente_id_fiscal": "DEMO-C-001",
+    "cliente_email": "compras@cliente01.example",
+    "forma_pago": "Transferencia",
+    "iban": "ES0000000000000000000001",
+    "base_imponible": "127.33",
+    "iva_importe": "26.74",
+    "total": "154.07"
+  },
+  "lineas": [
+    {
+      "referencia": "MAT-1001",
+      "descripcion": "Cuadernos de notas",
+      "cantidad": "5",
+      "precio_unitario": "8.50",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "42.50"
+    },
+    {
+      "referencia": "MAT-1002",
+      "descripcion": "Bolígrafos azules",
+      "cantidad": "10",
+      "precio_unitario": "2.25",
+      "descuento_pct": "5",
+      "iva_pct": "21",
+      "importe": "21.38"
+    },
+    {
+      "referencia": "MAT-1003",
+      "descripcion": "Carpetas de archivo",
+      "cantidad": "2",
+      "precio_unitario": "17.50",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "35.00"
+    },
+    {
+      "referencia": "MAT-1004",
+      "descripcion": "Etiquetas adhesivas",
+      "cantidad": "3",
+      "precio_unitario": "3.50",
+      "descuento_pct": "10",
+      "iva_pct": "21",
+      "importe": "9.45"
+    },
+    {
+      "referencia": "MAT-1005",
+      "descripcion": "Fundas transparentes",
+      "cantidad": "4",
+      "precio_unitario": "4.75",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "19.00"
+    }
+  ]
+}
