@@ -96,3 +96,12 @@ def test_formato_invalido_se_descarta_aunque_este_en_el_texto():
     text = TEXT + "Email: ventasOemisor04.example\n"
     res, _ = postprocess(response(cliente_email="ventasOemisor04.example", moneda="Pedido"), text)
     assert res["campos"]["cliente_email"] is None and res["campos"]["moneda"] is None
+
+
+def test_unidad_copiada_de_la_cabecera_no_invalida_el_numero():
+    """El modelo copia 'EUR' de la cabecera 'Precio EUR'; en la fila solo está '8,50'."""
+    line = dict.fromkeys(CAMPOS_LINEA, None) | {"precio_unitario": "8,50 EUR", "iva_pct": "21 %"}
+    text = "MAT-1   Cuadernos   5   8,50   0   21   42,50\n"
+    res, descartados = postprocess({"campos": response()["campos"], "lineas": [line]}, text)
+    assert res["lineas"][0]["precio_unitario"] == "8.50" and res["lineas"][0]["iva_pct"] == "21"
+    assert descartados == {}

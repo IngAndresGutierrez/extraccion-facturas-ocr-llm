@@ -9,10 +9,10 @@ Convenciones de formato (comunes a regex, OCR y LLM):
 
 CAMPOS = {
     # Factura y fechas
-    "numero_factura":    {"grupo": "Factura y fechas", "formato": "texto",      "descripcion": "Identificador de la factura (p. ej. PR-2026-001)"},
+    "numero_factura":    {"grupo": "Factura y fechas", "formato": "texto",      "descripcion": "Identificador alfanumérico de la factura"},
     "fecha_emision":     {"grupo": "Factura y fechas", "formato": "AAAA-MM-DD", "descripcion": "Fecha en que se emite la factura"},
     "fecha_vencimiento": {"grupo": "Factura y fechas", "formato": "AAAA-MM-DD", "descripcion": "Fecha límite de pago"},
-    "moneda":            {"grupo": "Factura y fechas", "formato": "ISO 4217",   "descripcion": "Código de moneda de los importes (p. ej. EUR)"},
+    "moneda":            {"grupo": "Factura y fechas", "formato": "ISO 4217",   "descripcion": "Código ISO de tres letras de la moneda de los importes"},
     # Pedido y albarán
     "numero_pedido":     {"grupo": "Pedido y albarán", "formato": "texto",      "descripcion": "Número del pedido asociado"},
     # Emisor y cliente
@@ -23,7 +23,7 @@ CAMPOS = {
     # Contacto
     "cliente_email":     {"grupo": "Contacto",         "formato": "email",      "descripcion": "Correo electrónico del cliente"},
     # Pago y entrega
-    "forma_pago":        {"grupo": "Pago y entrega",   "formato": "texto",      "descripcion": "Medio de pago (Transferencia, Tarjeta...)"},
+    "forma_pago":        {"grupo": "Pago y entrega",   "formato": "texto",      "descripcion": "Medio de pago acordado"},
     "iban":              {"grupo": "Pago y entrega",   "formato": "IBAN sin espacios", "descripcion": "IBAN de prueba para el pago"},
     # Importes
     "base_imponible":    {"grupo": "Importes",         "formato": "decimal",    "descripcion": "Base imponible tras descuentos y portes"},
