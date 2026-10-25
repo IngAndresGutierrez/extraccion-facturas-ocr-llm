@@ -39,6 +39,13 @@ RUN pip install \
     huggingface_hub==1.33.0
 ENV LLM_DIR=/app/modelos
 
+# Interfaz web (Parte 3).
+RUN pip install \
+    fastapi==0.162.0 \
+    uvicorn==0.54.0 \
+    python-multipart==0.0.32 \
+    httpx==0.28.1
+
 # Pesos de los OCR neuronales descargados en la construcción (versión fija dentro de la imagen).
 RUN python -c "import easyocr; easyocr.Reader(['es'], gpu=False, model_storage_directory='/models/easyocr', verbose=False)" \
     && python -c "from doctr.models import ocr_predictor; ocr_predictor(pretrained=True)" \
@@ -48,5 +55,7 @@ COPY src/ src/
 COPY tests/ tests/
 COPY pdfs/ pdfs/
 COPY evaluacion/ evaluacion/
+COPY frontend/ frontend/
 
-CMD ["python", "-m", "src.run_text_regex"]
+EXPOSE 8000
+CMD ["uvicorn", "src.api:app", "--host", "0.0.0.0", "--port", "8000"]

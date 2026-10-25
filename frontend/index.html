@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extracción de facturas</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Extracción de campos de facturas PDF</h1>
+    <p>Texto seleccionable, OCR y LLM local · ejecución en CPU</p>
+  </header>
+
+  <main>
+    <form id="form" class="card" novalidate>
+      <label class="drop" id="drop">
+        <input type="file" id="file" name="file" accept="application/pdf,.pdf">
+        <span id="drop-text">Arrastra un PDF aquí o <u>elige un archivo</u></span>
+      </label>
+
+      <fieldset>
+        <legend>Método</legend>
+        <label class="method">
+          <input type="radio" name="method" value="texto_regex" checked>
+          <span><strong>Texto directo + regex</strong><small>PDF con texto seleccionable · &lt; 1 s</small></span>
+        </label>
+        <label class="method">
+          <input type="radio" name="method" value="ocr_regex">
+          <span><strong>OCR + regex</strong><small>PDF escaneado · Tesseract · ≈ 1 s</small></span>
+        </label>
+        <label class="method">
+          <input type="radio" name="method" value="ocr_llm">
+          <span><strong>OCR + LLM</strong><small>PDF escaneado · Qwen2.5 3B local · ≈ 1 min</small></span>
+        </label>
+      </fieldset>
+
+      <button type="submit" id="submit">Extraer campos</button>
+    </form>
+
+    <section id="status" class="card status" hidden aria-live="polite">
+      <div class="spinner" id="spinner"></div>
+      <div>
+        <strong id="status-title"></strong>
+        <p id="status-detail"></p>
+      </div>
+    </section>
+
+    <section id="result" class="card" hidden>
+      <div class="result-head">
+        <div>
+          <h2 id="result-title"></h2>
+          <p id="result-meta"></p>
+        </div>
+        <a id="download" class="button" href="#" download>Descargar JSON</a>
+      </div>
+      <ul id="warnings" class="warnings"></ul>
+
+      <h3>Campos</h3>
+      <table id="fields"><tbody></tbody></table>
+
+      <h3>Líneas de producto</h3>
+      <div class="scroll"><table id="lines"><thead></thead><tbody></tbody></table></div>
+
+      <details>
+        <summary>Texto leído</summary>
+        <pre id="text"></pre>
+      </details>
+      <details>
+        <summary>JSON completo</summary>
+        <pre id="json"></pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

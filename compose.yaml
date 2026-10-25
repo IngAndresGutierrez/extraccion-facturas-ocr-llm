@@ -1,7 +1,20 @@
 services:
+  # Scripts y tests:  docker compose run --rm app python -m ...
   app:
     build: .
     image: practica-facturas
     # Monta el proyecto: los cambios de código y los resultados se ven sin reconstruir la imagen.
     volumes:
       - .:/app
+
+  # Interfaz web:  docker compose up web  ->  http://localhost:8000
+  web:
+    image: practica-facturas
+    depends_on: [app]
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      LLM_MODEL: qwen2.5-3b-q4
+    command: uvicorn src.api:app --host 0.0.0.0 --port 8000
