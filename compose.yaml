@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    image: practica-facturas
+    # Monta el proyecto: los cambios de código y los resultados se ven sin reconstruir la imagen.
+    volumes:
+      - .:/app

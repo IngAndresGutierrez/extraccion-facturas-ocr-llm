@@ -1,0 +1,25 @@
+{
+  "archivo": "Factura_05_imagen.pdf",
+  "metodo": "texto+regex",
+  "paginas": 1,
+  "tiempo_s": 0.0007,
+  "error": "El PDF no tiene texto seleccionable: usa el método OCR.",
+  "campos": {
+    "numero_factura": null,
+    "fecha_emision": null,
+    "fecha_vencimiento": null,
+    "moneda": null,
+    "numero_pedido": null,
+    "emisor_nombre": null,
+    "emisor_id_fiscal": null,
+    "cliente_nombre": null,
+    "cliente_id_fiscal": null,
+    "cliente_email": null,
+    "forma_pago": null,
+    "iban": null,
+    "base_imponible": null,
+    "iva_importe": null,
+    "total": null
+  },
+  "lineas": []
+}
