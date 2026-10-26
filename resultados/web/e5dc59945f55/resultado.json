@@ -1,0 +1,74 @@
+{
+  "archivo": "Factura_02_texto.pdf",
+  "metodo": "texto_regex",
+  "metodo_nombre": "Texto seleccionable + regex",
+  "paginas": 1,
+  "tiempo_s": 0.02,
+  "avisos": [],
+  "campos": {
+    "numero_factura": "PR-2026-002",
+    "fecha_emision": "2026-09-04",
+    "fecha_vencimiento": "2026-10-04",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0102",
+    "emisor_nombre": "Suministros Campus Demo",
+    "emisor_id_fiscal": "DEMO-E-002",
+    "cliente_nombre": "Academia Horizonte Ficticia",
+    "cliente_id_fiscal": "DEMO-C-002",
+    "cliente_email": "compras@cliente02.example",
+    "forma_pago": "Tarjeta",
+    "iban": "ES0000000000000000000002",
+    "base_imponible": "123.99",
+    "iva_importe": "26.04",
+    "total": "150.03"
+  },
+  "lineas": [
+    {
+      "referencia": "MAT-2001",
+      "descripcion": "Paquetes de papel",
+      "cantidad": "4",
+      "precio_unitario": "12.30",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "49.20"
+    },
+    {
+      "referencia": "MAT-2002",
+      "descripcion": "Rotuladores de colores",
+      "cantidad": "3",
+      "precio_unitario": "7.40",
+      "descuento_pct": "5",
+      "iva_pct": "21",
+      "importe": "21.09"
+    },
+    {
+      "referencia": "MAT-2003",
+      "descripcion": "Grapadoras",
+      "cantidad": "2",
+      "precio_unitario": "8.80",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "17.60"
+    },
+    {
+      "referencia": "MAT-2004",
+      "descripcion": "Etiquetas adhesivas",
+      "cantidad": "4",
+      "precio_unitario": "3.50",
+      "descuento_pct": "10",
+      "iva_pct": "21",
+      "importe": "12.60"
+    },
+    {
+      "referencia": "MAT-2005",
+      "descripcion": "Fundas transparentes",
+      "cantidad": "4",
+      "precio_unitario": "4.75",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "19.00"
+    }
+  ],
+  "detalles": {},
+  "texto_leido": "===== PÁGINA 1 =====\n\nFACTURA\n\nMaterial de oficina y formación · Datos ficticios\n\n\n\n\n\nNúmero de factura: PR-2026-002                    Pedido: PED-2026-0102\n\nFecha de emisión: 04/09/2026                          Albarán: ALB-2026-0202\n\nFecha de vencimiento: 04/10/2026                    Código de cliente: CLI-0302\n\nMoneda: EUR                                     Fecha de pedido: 02/09/2026\n\n\n\nEMISOR                                 CLIENTE\n\nSuministros Campus Demo                         Academia Horizonte Ficticia\n\nID fiscal: DEMO-E-002                                  ID fiscal: DEMO-C-002\n\nCalle de Ejemplo, 12                                Avenida de Prácticas, 22\n\nCP: 00021 · Ciudad Demo                              CP: 00022 · Ciudad Ficticia\n\nEmail: ventas@emisor02.example                       Email: compras@cliente02.example\n\nTeléfono: 000 100 002                                  Teléfono: 000 200 002\n\n\n\n Referencia  Descripción                            Cant.   Precio EUR  Dto. %   IVA %  Importe EUR\n\n\n\n MAT-2001    Paquetes de papel                         4        12,30      0      21         49,20\n\n\n MAT-2002    Rotuladores de colores                     3          7,40      5      21         21,09\n\n\n MAT-2003   Grapadoras                              2          8,80      0      21         17,60\n\n\n MAT-2004    Etiquetas adhesivas                       4          3,50     10      21         12,60\n\n\n MAT-2005   Fundas transparentes                      4          4,75      0      21         19,00\n\n\n\n\nPAGO Y ENTREGA                                   Subtotal sin descuentos              122,00 EUR\n\nForma de pago: Tarjeta                             Descuento en líneas                    2,51 EUR\n\nCondiciones: 30 días desde emisión\n                                                       Portes                                 4,50 EUR\nReferencia de pago: PAGO-2026-002\n                                               Base imponible                     123,99 EUR\nIBAN de prueba:\n\nES00 0000 0000 0000 0000 0002                       IVA (21 %)                           26,04 EUR\n\nEntrega: almacén del cliente\n                                   TOTAL                    150,03 EURDirección: Avenida de Prácticas, 22\n\n00022 · Ciudad Ficticia\n\n\n\n\n\nObservaciones: entregar de 09:00 a 14:00. Contacto: Recepción Demo.\n\nLos importes de línea incluyen el descuento indicado; el IVA se añade en el resumen.\n\n\nDocumento ficticio para una práctica. Identificadores, contactos y cuenta son de prueba.\n\nPágina 1 de 1."
+}

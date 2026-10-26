@@ -1,0 +1,87 @@
+{
+  "archivo": "Factura_01_texto.pdf",
+  "metodo": "ocr_regex",
+  "metodo_nombre": "OCR (Tesseract) + regex",
+  "paginas": 1,
+  "tiempo_s": 0.86,
+  "avisos": [
+    "El PDF tiene texto seleccionable: «Texto + regex» sería más rápido y exacto.",
+    "1 campo(s) sin valor (null): revisar manualmente."
+  ],
+  "campos": {
+    "numero_factura": "PR-2026-001",
+    "fecha_emision": "2026-09-01",
+    "fecha_vencimiento": "2026-10-01",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0101",
+    "emisor_nombre": "Papelería Aula Demo",
+    "emisor_id_fiscal": "DEMO-E-001",
+    "cliente_nombre": "Centro de Estudios Ejemplo",
+    "cliente_id_fiscal": "DEMO-C-001",
+    "cliente_email": null,
+    "forma_pago": "Transferencia",
+    "iban": "ES0000000000000000000001",
+    "base_imponible": "127.33",
+    "iva_importe": "26.74",
+    "total": "154.07"
+  },
+  "lineas": [
+    {
+      "referencia": "MAT-1001",
+      "descripcion": "Cuadernos de notas",
+      "cantidad": "5",
+      "precio_unitario": "8.50",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "42.50"
+    },
+    {
+      "referencia": "MAT-1002",
+      "descripcion": "Bolígrafos azules",
+      "cantidad": "10",
+      "precio_unitario": "2.25",
+      "descuento_pct": "5",
+      "iva_pct": "21",
+      "importe": "21.38"
+    },
+    {
+      "referencia": "MAT-1003",
+      "descripcion": "Carpetas de archivo",
+      "cantidad": "2",
+      "precio_unitario": "17.50",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "35.00"
+    },
+    {
+      "referencia": "MAT-1004",
+      "descripcion": "Etiquetas adhesivas",
+      "cantidad": "3",
+      "precio_unitario": "3.50",
+      "descuento_pct": "10",
+      "iva_pct": "21",
+      "importe": "9.45"
+    },
+    {
+      "referencia": "MAT-1005",
+      "descripcion": "Fundas transparentes",
+      "cantidad": "4",
+      "precio_unitario": "4.75",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "19.00"
+    }
+  ],
+  "detalles": {
+    "ocr": {
+      "engine": "tesseract",
+      "version": "5.5.0",
+      "lang": "spa",
+      "psm": 3,
+      "oem": 1,
+      "dpi": 250,
+      "preprocesado": "binarize"
+    }
+  },
+  "texto_leido": "===== PÁGINA 1 =====\n\nFACTURA\nMaterial de oficina y formación - Datos ficticios\nNúmero de factura: PR-2026-001                    Pedido: PED-2026-0101\nFecha de emisión: 01/09/2026                          Albarán: ALB-2026-0201\nFecha de vencimiento: 01/10/2026                      Código de cliente: CLI-0301\nMoneda: EUR                                           Fecha de pedido: 30/08/2026\nEMISOR                                              CLIENTE\nPapelería Aula Demo                                   Centro de Estudios Ejemplo\nID fiscal: DEMO-E-001                                   ID fiscal: DEMO-C-001\nCalle de Ejemplo, 11                                    Avenida de Prácticas, 21\nCP: 00011 - Ciudad Demo                               CP: 00012 - Ciudad Ficticia\nEmail: ventasOemisor01.example                       Email: comprasO cliente01.example\nTeléfono: 000 100 001                                  Teléfono: 000 200 001\nReferencia  Descripción                             Cant.   Precio EUR  Dto. %   IVA %  Importe EUR\nMAT-1001    Cuadernos de notas                           5          8,50       0       21          42,50\nMAT-1002    Bolígrafos azules                             10          2,25        5       21          21,38\nMAT-1003    Carpetas de archivo                           2         17,50       0       21          35,00\nMAT-1004    Etiquetas adhesivas                           3          3,50      10       21           9,45\nMAT-1005    Fundas transparentes                         4          4,75       0       21          19,00\nPAGO Y ENTREGA                                    Subtotal sin descuentos                129,50 EUR\nForma de pago: Transferencia                            Descuento en líneas                      2,17 EUR\nCondiciones: 30 días desde emisión\nPortes                                   0,00 EUR\nReferencia de pago: PAGO-2026-001\nBase imponible                        127,33 EUR\nIBAN de prueba:\nES00 0000 0000 0000 0000 0001                         IVA (21 %)                              26,74 EUR\nEntrega: almacén del cliente\nTOTAL                            154,07 EUR\nDirección: Avenida de Prácticas, 21\n00012 : Ciudad Ficticia\nObservaciones: entregar de 09:00 a 14:00. Contacto: Recepción Demo.\nLos importes de línea incluyen el descuento indicado; el IVA se añade en el resumen.\nDocumento ficticio para una práctica. Identificadores, contactos y cuenta son de prueba.\nPágina 1 de 1.\n"
+}

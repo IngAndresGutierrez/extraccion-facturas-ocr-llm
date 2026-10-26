@@ -1,0 +1,86 @@
+{
+  "archivo": "Factura_05_imagen.pdf",
+  "metodo": "ocr_regex",
+  "metodo_nombre": "OCR (Tesseract) + regex",
+  "paginas": 1,
+  "tiempo_s": 0.79,
+  "avisos": [
+    "1 campo(s) sin valor (null): revisar manualmente."
+  ],
+  "campos": {
+    "numero_factura": "PR-2026-005",
+    "fecha_emision": "2026-09-22",
+    "fecha_vencimiento": "2026-10-22",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0105",
+    "emisor_nombre": "Oficina Didáctica Demo",
+    "emisor_id_fiscal": "DEMO-E-005",
+    "cliente_nombre": "Instituto de Prácticas Ejemplo",
+    "cliente_id_fiscal": "DEMO-C-005",
+    "cliente_email": null,
+    "forma_pago": "Transferencia",
+    "iban": "ES0000000000000000000005",
+    "base_imponible": "228.63",
+    "iva_importe": "48.01",
+    "total": "276.64"
+  },
+  "lineas": [
+    {
+      "referencia": "MAT-5001",
+      "descripcion": "Sobres de correspondencia",
+      "cantidad": "8",
+      "precio_unitario": "4.60",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "36.80"
+    },
+    {
+      "referencia": "MAT-5002",
+      "descripcion": "Organizadores de mesa",
+      "cantidad": "6",
+      "precio_unitario": "11.25",
+      "descuento_pct": "5",
+      "iva_pct": "21",
+      "importe": "64.13"
+    },
+    {
+      "referencia": "MAT-5003",
+      "descripcion": "Cajas de almacenamiento",
+      "cantidad": "3",
+      "precio_unitario": "27.80",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "83.40"
+    },
+    {
+      "referencia": "MAT-5004",
+      "descripcion": "Etiquetas adhesivas",
+      "cantidad": "7",
+      "precio_unitario": "3.50",
+      "descuento_pct": "10",
+      "iva_pct": "21",
+      "importe": "22.05"
+    },
+    {
+      "referencia": "MAT-5005",
+      "descripcion": "Fundas transparentes",
+      "cantidad": "4",
+      "precio_unitario": "4.75",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "19.00"
+    }
+  ],
+  "detalles": {
+    "ocr": {
+      "engine": "tesseract",
+      "version": "5.5.0",
+      "lang": "spa",
+      "psm": 3,
+      "oem": 1,
+      "dpi": 250,
+      "preprocesado": "binarize"
+    }
+  },
+  "texto_leido": "===== PÁGINA 1 =====\n\nFACTURA\nMaterial de oficina y formación - Datos ficticios\nNúmero de factura: PR-2026-005                    Pedido: PED-2026-0105\nFecha de emisión: 22/09/2026                           Albarán: ALB-2026-0205\nFecha de vencimiento: 22/10/2026                      Código de cliente: CLI-0305\nMoneda: EUR                                           Fecha de pedido: 20/09/2026\nEMISOR                                              CLIENTE\nOficina Didáctica Demo                                 Instituto de Prácticas Ejemplo\nID fiscal: DEMO-E-005                                   ID fiscal: DEMO-C-005\nCalle de Ejemplo, 15                                    Avenida de Prácticas, 25\nCP: 00051 - Ciudad Demo                               CP: 00052 - Ciudad Ficticia\nEmail: ventasOemisor05.example                       Email: comprasO cliente05.example\nTeléfono: 000 100 005                                  Teléfono: 000 200 005\nReferencia  Descripción                              Cant.   Precio EUR  Dto. %   IVA %  Importe EUR\nMAT-5001    Sobres de correspondencia                     8          4,60       0       21          36,80\nMAT-5002    Organizadores de mesa                        6         11,25        5       21          64,13\nMAT-5003    Cajas de almacenamiento                      3         27,80       0       21          83,40\nMAT-5004    Etiquetas adhesivas                           7          3,50      10       21          22,05\nMAT-5005    Fundas transparentes                          4          4,75        0       21          19,00\nPAGO Y ENTREGA                                    Subtotal sin descuentos                231,20 EUR\nForma de pago: Transferencia                            Descuento en líneas                      5,82 EUR\nCondiciones: 30 días desde emisión\nPortes                                   3,25 EUR\nReferencia de pago: PAGO-2026-005\nBase imponible                        228,63 EUR\nIBAN de prueba:\nES00 0000 0000 0000 0000 0005                         IVA (21 %)                              48,01 EUR\nEntrega: almacén del cliente\nTOTAL                            276,64 EUR\nDirección: Avenida de Prácticas, 25\n00052 : Ciudad Ficticia\nObservaciones: entregar de 09:00 a 14:00. Contacto: Recepción Demo.\nLos importes de línea incluyen el descuento indicado; el IVA se añade en el resumen.\nDocumento ficticio para una práctica. Identificadores, contactos y cuenta son de prueba.\nPágina 1 de 1.\n"
+}

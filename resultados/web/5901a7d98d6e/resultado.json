@@ -1,0 +1,86 @@
+{
+  "archivo": "Factura_04_imagen.pdf",
+  "metodo": "ocr_regex",
+  "metodo_nombre": "OCR (Tesseract) + regex",
+  "paginas": 1,
+  "tiempo_s": 0.76,
+  "avisos": [
+    "1 campo(s) sin valor (null): revisar manualmente."
+  ],
+  "campos": {
+    "numero_factura": "PR-2026-004",
+    "fecha_emision": "2026-09-15",
+    "fecha_vencimiento": "2026-10-15",
+    "moneda": "EUR",
+    "numero_pedido": "PED-2026-0104",
+    "emisor_nombre": "Papelería Taller Demo",
+    "emisor_id_fiscal": "DEMO-E-004",
+    "cliente_nombre": "Centro Cultural Ficticio",
+    "cliente_id_fiscal": "DEMO-C-004",
+    "cliente_email": null,
+    "forma_pago": "Domiciliación",
+    "iban": "ES0000000000000000000004",
+    "base_imponible": "201.48",
+    "iva_importe": "42.31",
+    "total": "243.79"
+  },
+  "lineas": [
+    {
+      "referencia": "MAT-4001",
+      "descripcion": "Blocs de dibujo",
+      "cantidad": "12",
+      "precio_unitario": "3.25",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "39.00"
+    },
+    {
+      "referencia": "MAT-4002",
+      "descripcion": "Cajas de acuarelas",
+      "cantidad": "5",
+      "precio_unitario": "18.90",
+      "descuento_pct": "5",
+      "iva_pct": "21",
+      "importe": "89.78"
+    },
+    {
+      "referencia": "MAT-4003",
+      "descripcion": "Pinceles surtidos",
+      "cantidad": "2",
+      "precio_unitario": "14.40",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "28.80"
+    },
+    {
+      "referencia": "MAT-4004",
+      "descripcion": "Etiquetas adhesivas",
+      "cantidad": "6",
+      "precio_unitario": "3.50",
+      "descuento_pct": "10",
+      "iva_pct": "21",
+      "importe": "18.90"
+    },
+    {
+      "referencia": "MAT-4005",
+      "descripcion": "Fundas transparentes",
+      "cantidad": "4",
+      "precio_unitario": "4.75",
+      "descuento_pct": "0",
+      "iva_pct": "21",
+      "importe": "19.00"
+    }
+  ],
+  "detalles": {
+    "ocr": {
+      "engine": "tesseract",
+      "version": "5.5.0",
+      "lang": "spa",
+      "psm": 3,
+      "oem": 1,
+      "dpi": 250,
+      "preprocesado": "binarize"
+    }
+  },
+  "texto_leido": "===== PÁGINA 1 =====\n\nFACTURA\nMaterial de oficina y formación - Datos ficticios\nNúmero de factura: PR-2026-004                    Pedido: PED-2026-0104\nFecha de emisión: 15/09/2026                           Albarán: ALB-2026-0204\nFecha de vencimiento: 15/10/2026                      Código de cliente: CLI-0304\nMoneda: EUR                                           Fecha de pedido: 13/09/2026\nEMISOR                                              CLIENTE\nPapelería Taller Demo                                   Centro Cultural Ficticio\nID fiscal: DEMO-E-004                                   ID fiscal: DEMO-C-004\nCalle de Ejemplo, 14                                    Avenida de Prácticas, 24\nCP: 00041 - Ciudad Demo                               CP: 00042 - Ciudad Ficticia\nEmail: ventasOemisor04.example                       Email: comprasO cliente04.example\nTeléfono: 000 100 004                                  Teléfono: 000 200 004\nReferencia  Descripción                              Cant.   Precio EUR  Dto. %   IVA %  Importe EUR\nMAT-4001    Blocs de dibujo                              12          3,25        0       21          39,00\nMAT-4002    Cajas de acuarelas                            5         18,90        5       21          89,78\nMAT-4003    Pinceles surtidos                              2         14,40       0       21          28,80\nMAT-4004    Etiquetas adhesivas                           6          3,50      10       21          18,90\nMAT-4005    Fundas transparentes                          4          4,75        0       21          19,00\nPAGO Y ENTREGA                                    Subtotal sin descuentos                202,30 EUR\nForma de pago: Domiciliación                            Descuento en líneas                      6,82 EUR\nCondiciones: 30 días desde emisión\nPortes                                   6,00 EUR\nReferencia de pago: PAGO-2026-004\nBase imponible                        201,48 EUR\nIBAN de prueba:\nES00 0000 0000 0000 0000 0004                         IVA (21 %)                              42,31 EUR\nEntrega: almacén del cliente\nTOTAL                            243,79 EUR\nDirección: Avenida de Prácticas, 24\n00042 - Ciudad Ficticia\nObservaciones: entregar de 09:00 a 14:00. Contacto: Recepción Demo.\nLos importes de línea incluyen el descuento indicado; el IVA se añade en el resumen.\nDocumento ficticio para una práctica. Identificadores, contactos y cuenta son de prueba.\nPágina 1 de 1.\n"
+}

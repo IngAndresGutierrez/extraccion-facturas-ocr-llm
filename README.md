@@ -210,8 +210,10 @@ docker compose up web          # http://localhost:8000   (Ctrl+C para parar)
 | Ruta | Función |
 |---|---|
 | `GET /` · `GET /static/*` | página y recursos estáticos |
+| `POST /api/analizar` | `file` (PDF) → páginas, si tiene texto seleccionable y método sugerido (sin OCR) |
 | `POST /api/extract` | `file` (PDF) + `method` (`texto_regex` · `ocr_regex` · `ocr_llm`) → `202 {"job_id"}` |
-| `GET /api/jobs/{id}` | `en_cola` · `procesando` (+ etapa y segundos) · `completado` (+ resultado) · `error` (+ mensaje) |
+| `GET /api/jobs/{id}` | `en_cola` · `procesando` (+ etapa y segundos) · `completado` (+ resultado) · `error` (+ mensaje) · `cancelado`; incluye `estimado_s` (media de los últimos trabajos del mismo método) |
+| `DELETE /api/jobs/{id}` | cancela: en cola se descarta; en proceso se detiene al empezar la siguiente etapa |
 | `GET /api/jobs/{id}/descarga` | JSON del resultado como archivo adjunto |
 
 OCR + LLM tarda unos 40 s, así que se usa el flujo con identificador de trabajo que permite el enunciado. Los

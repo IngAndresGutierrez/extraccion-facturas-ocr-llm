@@ -32,6 +32,13 @@ class ExtractionError(Exception):
     """Error esperado, con un mensaje pensado para mostrarse al usuario."""
 
 
+def analyze(pdf: bytes) -> dict:
+    """Lectura rápida (sin OCR) para sugerir el método: texto seleccionable -> texto_regex, escaneado -> ocr_regex."""
+    pages = _open(pdf)
+    has_text = pdf_text.has_text_layer(pages)
+    return {"paginas": len(pages), "tiene_texto": has_text, "metodo_sugerido": "texto_regex" if has_text else "ocr_regex"}
+
+
 # Los motores se cargan una vez y se reutilizan entre peticiones (el LLM tarda ~4 s y ocupa ~4 GB).
 _engines: dict = {}
 

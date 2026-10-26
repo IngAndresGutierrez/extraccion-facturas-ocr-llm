@@ -1,4 +1,5 @@
 import json
+import threading
 import time
 from pathlib import Path
 
@@ -26,7 +27,7 @@ def wait(client, job_id: str, timeout: float = 30) -> dict:
     end = time.time() + timeout
     while time.time() < end:
         job = client.get(f"/api/jobs/{job_id}").json()
-        if job["estado"] in ("completado", "error"):
+        if job["estado"] in ("completado", "error", "cancelado"):
             return job
         time.sleep(0.1)
     raise TimeoutError(job)
@@ -100,3 +101,53 @@ def test_pdf_danado(client):
 
 def test_trabajo_inexistente(client):
     assert client.get("/api/jobs/nope").status_code == 404
+
+
+@pytest.mark.parametrize("name,tiene_texto,sugerido", [
+    ("Factura_01_texto.pdf", True, "texto_regex"),
+    ("Factura_04_imagen.pdf", False, "ocr_regex"),
+])
+def test_analizar_sugiere_metodo(client, name, tiene_texto, sugerido):
+    r = client.post("/api/analizar", files={"file": (name, (PDFS / name).read_bytes(), "application/pdf")})
+    assert r.json() == {"paginas": 1, "tiene_texto": tiene_texto, "metodo_sugerido": sugerido}
+
+
+def test_analizar_pdf_danado(client):
+    r = client.post("/api/analizar", files={"file": ("roto.pdf", b"%PDF-1.7\nbasura", "application/pdf")})
+    assert r.status_code == 400 and "No se pudo abrir el PDF" in r.json()["detail"]
+
+
+def test_cancelar_en_proceso_y_en_cola(client, monkeypatch):
+    soltar = threading.Event()
+
+    def lento(pdf, method, filename, job_id, progress):
+        progress("Etapa 1")
+        soltar.wait(10)
+        progress("Etapa 2")  # aquí se detiene si se canceló
+        return {}
+
+    monkeypatch.setattr(pipeline, "run", lento)
+    primero = submit(client, "Factura_01_texto.pdf", "texto_regex").json()["job_id"]
+    segundo = submit(client, "Factura_01_texto.pdf", "texto_regex").json()["job_id"]
+    while client.get(f"/api/jobs/{primero}").json()["etapa"] != "Etapa 1":
+        time.sleep(0.05)
+
+    assert client.delete(f"/api/jobs/{segundo}").json() == {"estado": "cancelado"}
+    assert client.delete(f"/api/jobs/{primero}").json() == {"estado": "procesando"}
+    soltar.set()
+    end = time.time() + 10
+    while client.get(f"/api/jobs/{primero}").json()["estado"] != "cancelado" and time.time() < end:
+        time.sleep(0.05)
+    assert client.get(f"/api/jobs/{primero}").json()["estado"] == "cancelado"
+    assert client.delete(f"/api/jobs/{primero}").status_code == 409
+
+
+def test_estimado_usa_el_historial(client):
+    job = wait(client, submit(client, "Factura_01_texto.pdf", "texto_regex").json()["job_id"])
+    assert client.get(f"/api/jobs/{job['id']}").json()["estimado_s"] < api.ESTIMADO_S["texto_regex"]
+
+
+def test_frontend_sin_cache(client):
+    for path in ("/", "/static/app.js", "/static/styles.css"):
+        assert client.get(path).headers["cache-control"] == "no-cache"
+    assert "cache-control" not in client.get("/api/metodos").headers
